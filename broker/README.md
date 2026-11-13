@@ -981,8 +981,8 @@ the VM backend, or not on its current attempt.
 ## 11. Operator interface
 
 This is a summary, not a wire contract. Operator routes live under `/v1/admin/` and need
-the operator bearer. In the reference broker that is the instance's webhook secret, a
-bootstrap choice it documents as temporary. They cover:
+the operator bearer, a secret of its own that is never shared with a job source. A broker
+MUST refuse operator routes when no operator secret is configured. They cover:
 
 - tenants: `POST`/`GET /v1/admin/tenants`, and moving a tenant's installation
   ([`tenant-upsert-request.json`](examples/tenant-upsert-request.json));
@@ -1046,7 +1046,6 @@ and humans. Its tools are `fleet`, `jobs`, `placements`, `explain_placement`,
 **Residual risks the protocol accepts:**
 
 - A compromised host sees the work it runs, including its in-flight credentials.
-- The webhook secret doubles as the operator bearer in the reference implementation.
 - Enforce-mode egress does not stop domain fronting through an allowed CDN.
 
 ## 13. Notes on implementation and documentation
@@ -1060,8 +1059,6 @@ protocol implies. This spec follows the code.
   relies on the poll's `revoke` list instead.
 - `started_at` on a completion report is sent by the agent but ignored by the broker.
 - The broker stores an unrecognised `phase` as sent rather than refusing it.
-- The broker's README calls the operator credential an "operator token". On the broker it
-  is the webhook secret; the name is only the client tools' environment variable.
 
 ## 14. Examples
 
