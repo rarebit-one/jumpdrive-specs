@@ -9,7 +9,7 @@ from the organisation's own provider. These documents are the seams between them
 | --- | --- | --- |
 | [Runner protocol](runner/) | coordination plane → runner | stable (v1–v6) |
 | [Gateway](gateway/) | callers, coordinator and credential sources ↔ jumpdrive-gateway | stable (run tokens, trusted issuers); draft (policy by reference) |
-| [Broker](broker/) | broker ↔ self-hosted machines that dial out | stable |
+| [Broker](broker/) | broker ↔ self-hosted machines that dial out | stable; draft (`jd_run`, egress enforce, version negotiation) |
 | [Voidbind](voidbind/) | devices ↔ an organisation's Void-Which-Binds broker | stable |
 
 ## Conventions
