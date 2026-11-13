@@ -1,0 +1,31 @@
+{
+  "protocol_version": 1,
+  "capacity_free": 3,
+  "running": ["00000000-0000-4000-8000-0000000000b1"],
+  "image_digests": ["sha256:0000000000000000000000000000000000000000000000000000000000000000"],
+  "disk_free_pct": 64,
+  "mem_available_mb": 40960,
+  "cpu": {
+    "free_cores": 9.5,
+    "total_cores": 16.0,
+    "regular_cores": 1.0,
+    "heavy_cores": 2.0
+  },
+  "capabilities": {
+    "name": "build-a-podman",
+    "host": "build-a.example.com",
+    "os": "linux",
+    "arch": "amd64",
+    "cpus": 16,
+    "memory_mb": 65536,
+    "has_kvm": true,
+    "container_runtime": "podman",
+    "labels": ["example-gpu", "jdb-grant-vm", "jdb-kind-jdrun"],
+    "max_concurrency": 8,
+    "heavy_slots": 2,
+    "cpus_per_job": 4.0,
+    "heavy_opt_out": false,
+    "agent_version": "0.9.5",
+    "host_runner_version": "2.330.0"
+  }
+}

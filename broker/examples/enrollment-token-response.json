@@ -1,0 +1,5 @@
+{
+  "token": "<enrollment-token-64-hex>",
+  "worker_name": "build-a-podman",
+  "expires_at": "2026-01-01T01:00:00Z"
+}

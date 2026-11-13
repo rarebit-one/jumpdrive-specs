@@ -1,0 +1,32 @@
+{
+  "phase": "completed",
+  "container_exit": 0,
+  "oom_killed": false,
+  "memory_peak_mb": 3120,
+  "started_at": "2026-01-01T00:00:05Z",
+  "ended_at": "2026-01-01T00:12:40Z",
+  "image_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "error": "",
+  "vm": {
+    "boot_ms": 1850,
+    "guest_mem_mb": 3072,
+    "cache_generation": 0,
+    "egress_names": 2,
+    "egress_dests": 2,
+    "egress_bytes": 524288,
+    "egress_record": {
+      "names": [
+        {"name": "gateway.example.com", "queries": 14, "would_block": false},
+        {"name": "unlisted.example.net", "queries": 1, "would_block": true}
+      ],
+      "names_overflow": 0,
+      "invalid_names": 0,
+      "dests": [
+        {"ip": "203.0.113.10", "proto": "tcp", "port": 443, "bytes": 520000, "name": "gateway.example.com"},
+        {"ip": "198.51.100.7", "proto": "udp", "port": 443, "bytes": 4288, "name": ""}
+      ],
+      "mode": "enforce",
+      "refused": 1
+    }
+  }
+}

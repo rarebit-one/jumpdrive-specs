@@ -1,0 +1,5 @@
+{
+  "token": "<run-token>",
+  "expires_at": "2026-01-01T01:00:00Z",
+  "callback_url": "https://control.example.com"
+}
