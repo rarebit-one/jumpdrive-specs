@@ -1,0 +1,4 @@
+{
+  "mode": "enforce",
+  "allow": ["control.example.com", "gateway.example.com", "*.objects.example.com", "api.example.com:8443"]
+}

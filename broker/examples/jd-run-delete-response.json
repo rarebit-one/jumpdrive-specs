@@ -1,0 +1,5 @@
+{
+  "run_id": "00000000-0000-4000-8000-0000000000d1",
+  "state": "revoked",
+  "note": "queued attempts are cancelled; live placements are killed on the worker's next poll"
+}

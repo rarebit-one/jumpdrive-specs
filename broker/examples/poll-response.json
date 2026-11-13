@@ -1,0 +1,71 @@
+{
+  "placements": [
+    {
+      "placement_id": "00000000-0000-4000-8000-0000000000c1",
+      "kind": "workflow_job",
+      "runner_name": "example-123456789-1",
+      "jit_config": "<jit-config>",
+      "image": "registry.example.com/ci-runner@sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "timeout_seconds": 3600,
+      "lease_expires_at": "2026-01-01T00:01:00Z",
+      "memory_cap_mb": 4096,
+      "cache_volumes": {
+        "bundle": "jdb-bundle-example-org--example-repo",
+        "npm": "jdb-npm-example-org--example-repo"
+      },
+      "cache_volume_scheme": 2,
+      "env": {
+        "BUNDLE_PATH": "/cache/bundle",
+        "npm_config_cache": "/cache/npm"
+      },
+      "leased_caches": [
+        {
+          "name": "gradle",
+          "volume": "jdb-gradle-example-org--example-repo",
+          "env": {
+            "GRADLE_USER_HOME": "/cache/gradle",
+            "JDB_GRADLE_CACHE": "/cache/gradle"
+          }
+        }
+      ]
+    },
+    {
+      "placement_id": "00000000-0000-4000-8000-0000000000c3",
+      "kind": "workflow_job",
+      "runner_name": "example-123456790-2",
+      "jit_config": "<jit-config>",
+      "image": "registry.example.com/vm-runner@sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "timeout_seconds": 3600,
+      "lease_expires_at": "2026-01-01T00:01:00Z",
+      "memory_mb": 9216,
+      "shared_caches": [
+        {"name": "docker", "volume": "jdb-docker-example-org--example-repo--pr"}
+      ],
+      "grants": ["vm"]
+    },
+    {
+      "placement_id": "00000000-0000-4000-8000-0000000000c2",
+      "kind": "jd_run",
+      "runner_name": "example-jdrun-00000000-0000-4000-8000-0000000000d1-1-1",
+      "image": "registry.example.com/run-vm@sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "timeout_seconds": 3600,
+      "lease_expires_at": "2026-01-01T00:01:00Z",
+      "memory_mb": 4096,
+      "vcpus": 2,
+      "grants": ["vm"],
+      "jd_run": {
+        "run_id": "00000000-0000-4000-8000-0000000000d1",
+        "attempt": 1,
+        "url": "https://control.example.com",
+        "token": "<run-token>"
+      },
+      "egress": {
+        "mode": "enforce",
+        "allow": ["control.example.com", "gateway.example.com", "*.objects.example.com", "api.example.com:8443"]
+      }
+    }
+  ],
+  "revoke": ["00000000-0000-4000-8000-0000000000b2"],
+  "poll_after_ms": 500,
+  "expected_agent_version": "0.9.5"
+}

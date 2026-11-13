@@ -1,0 +1,7 @@
+{
+  "kind": "github_org",
+  "github_org": "example-org",
+  "installation_id": 12345678,
+  "public_repository_policy": "deny",
+  "active": true
+}

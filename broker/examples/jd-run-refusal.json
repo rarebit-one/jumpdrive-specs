@@ -1,0 +1,4 @@
+{
+  "error": "lane_not_armed",
+  "detail": "this submitter's tenant is not listed in JDB_JDRUN_TENANTS"
+}

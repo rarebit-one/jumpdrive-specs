@@ -1,0 +1,8 @@
+{
+  "tenant_id": "00000000-0000-4000-8000-0000000000f2",
+  "github_org": "example-org",
+  "mode": "shared",
+  "repository_allowlist": ["example-org/example-repo"],
+  "public_repository_policy": "deny",
+  "priority": 10
+}

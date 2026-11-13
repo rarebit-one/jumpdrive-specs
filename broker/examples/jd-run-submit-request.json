@@ -1,0 +1,10 @@
+{
+  "run_id": "00000000-0000-4000-8000-0000000000d1",
+  "attempt": 1,
+  "org_ref": "<opaque-org-reference>",
+  "size": "standard",
+  "egress": {
+    "mode": "enforce",
+    "allow": ["control.example.com", "gateway.example.com", "*.objects.example.com", "api.example.com:8443"]
+  }
+}

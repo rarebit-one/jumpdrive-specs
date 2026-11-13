@@ -1,0 +1,5 @@
+{
+  "worker_id": "00000000-0000-4000-8000-0000000000a1",
+  "token": "<worker-credential-64-hex>",
+  "poll_after_ms": 1000
+}

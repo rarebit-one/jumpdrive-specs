@@ -1,0 +1,17 @@
+{
+  "name": "build-a-podman",
+  "host": "build-a.example.com",
+  "os": "linux",
+  "arch": "amd64",
+  "cpus": 16,
+  "memory_mb": 65536,
+  "has_kvm": true,
+  "container_runtime": "podman",
+  "labels": ["example-gpu", "jdb-grant-vm", "jdb-kind-jdrun"],
+  "max_concurrency": 8,
+  "heavy_slots": 2,
+  "cpus_per_job": 4.0,
+  "heavy_opt_out": false,
+  "agent_version": "0.9.5",
+  "host_runner_version": "2.330.0"
+}
