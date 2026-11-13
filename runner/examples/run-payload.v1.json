@@ -1,0 +1,99 @@
+{
+  "protocol_version": 1,
+  "run_id": "11111111-1111-4111-8111-111111111111",
+  "workspace_id": "22222222-2222-4222-8222-222222222222",
+  "workflow_path": ".workspace/workflows/budget_review.yml",
+  "tarball_url": "https://objects.example.com/snapshots/11111111.tar.gz?X-Amz-Expires=3600&X-Amz-Signature=PLACEHOLDER",
+  "input_manifest": {
+    ".workspace/workflows/budget_review.yml": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+    "campaigns/q3-plan.md": "2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae",
+    "campaigns/q2-retro.md": "fcde2b2edba56bf408601fb721fe9b5c338d10ee429ea04fae5511b68fbf8fb9"
+  },
+  "repo_snapshot": 7,
+  "permissions": {
+    "read": [
+      "campaigns"
+    ],
+    "write": [
+      ".workspace/runs",
+      "campaigns"
+    ],
+    "tools": [
+      "read_file",
+      "write_file",
+      "run_code",
+      "http_fetch"
+    ],
+    "hosts": [
+      "api.example.com:443"
+    ]
+  },
+  "context_bundle": {
+    "mode": "hybrid",
+    "inputs": {
+      "quarter": "Q3"
+    }
+  },
+  "provider": {
+    "preferred": "anthropic",
+    "model": "example-model-1",
+    "engine": "native",
+    "credentials": {
+      "anthropic": "sk-test-PLACEHOLDER-anthropic",
+      "openai": "sk-test-PLACEHOLDER-openai",
+      "openrouter": "sk-test-PLACEHOLDER-openrouter"
+    }
+  },
+  "secrets": {
+    "BUDGET_API_TOKEN": "PLACEHOLDER-secret-value",
+    "DEPLOY_KEY": "PLACEHOLDER-setup-only-secret"
+  },
+  "agent_secrets": [
+    "BUDGET_API_TOKEN"
+  ],
+  "runner": {
+    "isolation": "container"
+  },
+  "connectors": [
+    {
+      "name": "billing",
+      "kind": "mcp",
+      "transport": "streamable_http",
+      "endpoint": "https://mcp.example.com/billing",
+      "auth": {
+        "type": "bearer",
+        "token": "PLACEHOLDER-connector-token"
+      },
+      "clientInfo": {
+        "name": "example-runner-billing",
+        "version": "0.1.0"
+      },
+      "tools": [
+        "list_invoices",
+        "get_invoice"
+      ]
+    },
+    {
+      "name": "local_tool",
+      "kind": "mcp",
+      "transport": "stdio",
+      "command": "billing-mcp",
+      "args": [
+        "--verbose"
+      ],
+      "auth": {
+        "type": "none"
+      }
+    }
+  ],
+  "limits": {
+    "max_steps": 25,
+    "max_duration_ms": 600000
+  },
+  "callbacks": {
+    "heartbeat_url": "https://control.example.com/api/v1/runs/11111111-1111-4111-8111-111111111111/heartbeat",
+    "result_url": "https://control.example.com/api/v1/runs/11111111-1111-4111-8111-111111111111/result",
+    "token": "PLACEHOLDER-run-callback-token",
+    "interval_ms": 10000
+  }
+}

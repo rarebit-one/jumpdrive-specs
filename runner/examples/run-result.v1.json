@@ -1,0 +1,83 @@
+{
+  "protocol_version": 1,
+  "status": "success",
+  "change_set": {
+    "changed": [
+      {
+        "path": "campaigns/q3-plan.md",
+        "content": "# Q3 plan\n\nRevised after budget review.\n"
+      },
+      {
+        "path": ".workspace/runs/11111111-1111-4111-8111-111111111111/summary.bin",
+        "content": "AAECAw==",
+        "encoding": "base64"
+      }
+    ],
+    "deleted": [
+      "campaigns/q2-retro.md"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": ".workspace/runs/11111111-1111-4111-8111-111111111111/output.md",
+      "bytes": 42
+    }
+  ],
+  "logs": [
+    "[2026-07-02T00:00:00.000Z] run 11111111-1111-4111-8111-111111111111 starting (snapshot 7)"
+  ],
+  "error": null,
+  "verification": {
+    "passed": true,
+    "checks": [
+      {
+        "command": "bin/check-budget",
+        "exitCode": 0,
+        "timedOut": false,
+        "output": "ok"
+      }
+    ]
+  },
+  "knowledge": [
+    {
+      "content": "Vendor X invoices arrive net-30; budget reviews must account for the lag.",
+      "title": "Vendor X payment terms",
+      "kind": "fact",
+      "path": ".workspace/knowledge/vendor-x-terms.md",
+      "dedupe_key": "vendor-x-payment-terms",
+      "source": "workflow"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Rates file is stale",
+      "body": "data/rates.csv was last updated in Q1.",
+      "dedupe_key": "stale-rates",
+      "labels": [
+        "data-quality"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "key": "draft-summary",
+      "title": "Draft summary",
+      "context_refs": [
+        "ref:example-block-1"
+      ],
+      "output_refs": [
+        "ref:example-block-2"
+      ],
+      "initial_message": "Summarize the selected research.",
+      "computer_id": "33333333-3333-4333-8333-333333333333"
+    }
+  ],
+  "provider": {
+    "engine": "native",
+    "name": "anthropic",
+    "model": "example-model-1"
+  },
+  "outcome": "completed",
+  "stop_reason": "end_turn",
+  "finish_reason": "stop"
+}

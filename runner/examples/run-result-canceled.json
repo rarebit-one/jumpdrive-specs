@@ -1,0 +1,21 @@
+{
+  "protocol_version": 1,
+  "status": "error",
+  "change_set": {
+    "changed": [],
+    "deleted": []
+  },
+  "artifacts": [],
+  "logs": [
+    "[2026-07-02T00:01:00.000Z] run canceled: canceled by user"
+  ],
+  "error": "canceled: canceled by user",
+  "provider": {
+    "engine": "native",
+    "name": "anthropic",
+    "model": "example-model-1"
+  },
+  "outcome": "canceled",
+  "stop_reason": "canceled",
+  "finish_reason": "unknown"
+}
