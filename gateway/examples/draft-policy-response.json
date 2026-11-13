@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "principal": {
+    "issuer": "https://id.example.com",
+    "subject": "00000000-0000-4000-8000-0000000000aa"
+  },
+  "workspace": "00000000-0000-4000-8000-0000000000cc",
+  "expires_at": "2030-01-01T04:15:00Z",
+  "grants": {
+    "providers": {
+      "anthropic": {
+        "credential_ref": {
+          "kind": "provider_key",
+          "binding": "anthropic",
+          "layer": "user",
+          "owner": "00000000-0000-4000-8000-0000000000aa"
+        }
+      },
+      "openai": {
+        "credential_ref": { "kind": "provider_key", "binding": "openai", "layer": "org" }
+      }
+    },
+    "models": ["example-model-large", "example-model-small-*"],
+    "git": [
+      {
+        "host": "git.example.com",
+        "owner": "acme",
+        "repo": "widgets",
+        "write": true,
+        "username": "x-access-token",
+        "credential_ref": {
+          "kind": "git",
+          "binding": "git.example.com",
+          "layer": "workspace",
+          "owner": "00000000-0000-4000-8000-0000000000cc"
+        }
+      }
+    ],
+    "connectors": [
+      {
+        "id": "tracker",
+        "url": "https://mcp.example.com/mcp",
+        "header": "Authorization",
+        "scheme": "Bearer",
+        "credential_ref": { "kind": "oauth", "binding": "mcp.example.com", "layer": "org" }
+      }
+    ]
+  },
+  "budget": { "max_tokens": 2000000 }
+}

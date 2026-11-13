@@ -1,0 +1,23 @@
+{
+  "keys": [
+    {
+      "kty": "EC",
+      "crv": "P-256",
+      "kid": "key-2030-01",
+      "alg": "ES256",
+      "use": "sig",
+      "key_ops": ["verify"],
+      "x": "<base64url 32-byte x PLACEHOLDER>",
+      "y": "<base64url 32-byte y PLACEHOLDER>"
+    },
+    {
+      "kty": "RSA",
+      "kid": "key-2029-12",
+      "alg": "RS256",
+      "use": "sig",
+      "key_ops": ["verify"],
+      "n": "<base64url modulus, at least 2048 bits, PLACEHOLDER>",
+      "e": "AQAB"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ts": "2030-01-01T04:12:52.715Z",
+  "run_id": "00000000-0000-4000-8000-000000000001",
+  "attempt": 3,
+  "route": "provider",
+  "destination": "anthropic",
+  "method": "POST",
+  "status": 200,
+  "bytes_in": 18342,
+  "bytes_out": 52113,
+  "tokens": 9120,
+  "tokens_estimated": true,
+  "model": "example-model-large",
+  "credential_layer": "user",
+  "decision": "forwarded",
+  "duration_ms": 8811
+}
