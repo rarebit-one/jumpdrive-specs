@@ -1,0 +1,4 @@
+{
+  "approval_assertion": "<compact-jws>",
+  "expires_in": 300
+}

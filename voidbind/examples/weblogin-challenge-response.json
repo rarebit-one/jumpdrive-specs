@@ -1,0 +1,11 @@
+{
+  "id": "71717171717171717171717171717171",
+  "nonce": "cnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnI",
+  "audience": "https://rp.example.com",
+  "expires_at": 1798761720,
+  "candidates": [
+    17,
+    42,
+    88
+  ]
+}

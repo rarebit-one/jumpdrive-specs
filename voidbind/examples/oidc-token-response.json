@@ -1,0 +1,6 @@
+{
+  "id_token": "<compact-jws>",
+  "access_token": "ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubk",
+  "token_type": "Bearer",
+  "expires_in": 300
+}

@@ -1,0 +1,9 @@
+{
+  "client_id": "example-mcp-client",
+  "redirect_uri": "https://rp.example.com/oauth/callback",
+  "resource": "https://rp.example.com/mcp",
+  "scopes": [
+    "mcp:tools.read",
+    "mcp:tools.write"
+  ]
+}
