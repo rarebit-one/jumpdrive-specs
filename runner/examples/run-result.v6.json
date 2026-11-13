@@ -1,0 +1,93 @@
+{
+  "protocol_version": 6,
+  "status": "success",
+  "change_set": {
+    "changed": [],
+    "deleted": []
+  },
+  "artifacts": [],
+  "logs": [
+    "[2026-11-07T00:00:00.000Z] run 11111111-1111-4111-8111-111111111111 suspended on 1 pending external call(s); change set withheld"
+  ],
+  "provider": {
+    "engine": "native",
+    "name": "anthropic",
+    "model": "example-model-1"
+  },
+  "outcome": "suspended",
+  "stop_reason": "suspended",
+  "finish_reason": "tool_calls",
+  "pending_calls": [
+    {
+      "id": "call_ask_2",
+      "name": "ask_human",
+      "input": {
+        "question": "Which FX rate date?"
+      },
+      "arguments_text": "{\"question\":\"Which FX rate date?\"}"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "text": "Summarise the Q3 budget against data/rates.csv."
+    },
+    {
+      "role": "assistant",
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_ask_1",
+          "name": "ask_human",
+          "input": {
+            "question": "Include the FX hedge line?"
+          },
+          "argumentsText": "{\"question\":\"Include the FX hedge line?\"}",
+          "meta": {
+            "provider_signature": "PLACEHOLDER"
+          },
+          "external": true
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "results": [
+        {
+          "toolCallId": "call_ask_1",
+          "content": "Yes, include it.",
+          "structured": {
+            "answer": "yes"
+          },
+          "isError": false,
+          "rejected": false
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_ask_2",
+          "name": "ask_human",
+          "input": {
+            "question": "Which FX rate date?"
+          },
+          "argumentsText": "{\"question\":\"Which FX rate date?\"}",
+          "external": true
+        }
+      ]
+    }
+  ],
+  "consumed": {
+    "steps": 1,
+    "duration_ms": 2300,
+    "usage": {
+      "input_tokens": 1800,
+      "output_tokens": 45,
+      "cache_read_input_tokens": 12000,
+      "cache_creation_input_tokens": 400
+    }
+  }
+}

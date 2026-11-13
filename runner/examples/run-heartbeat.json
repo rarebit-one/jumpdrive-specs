@@ -1,0 +1,113 @@
+{
+  "request": {
+    "protocol_version": 1,
+    "run_id": "11111111-1111-4111-8111-111111111111",
+    "last_seq": 14,
+    "events": [
+      {
+        "seq": 5,
+        "type": "run.started",
+        "at": "2026-10-06T06:59:59.000Z",
+        "data": {
+          "tool_count": 3,
+          "tool_schema_bytes": 18432
+        }
+      },
+      {
+        "seq": 6,
+        "type": "tool.called",
+        "at": "2026-10-06T07:00:00.000Z",
+        "data": {
+          "step": 1,
+          "call_id": "c1",
+          "name": "read_file",
+          "replay": "safe",
+          "input_bytes": 42
+        }
+      },
+      {
+        "seq": 7,
+        "type": "tool.succeeded",
+        "at": "2026-10-06T07:00:00.500Z",
+        "data": {
+          "step": 1,
+          "call_id": "c1",
+          "name": "read_file",
+          "output_bytes": 2048
+        }
+      },
+      {
+        "seq": 8,
+        "type": "model.turn",
+        "at": "2026-10-06T07:00:01.000Z",
+        "data": {
+          "step": 1,
+          "tool_calls": [
+            "read_file"
+          ],
+          "usage": {
+            "input_tokens": 1200,
+            "output_tokens": 80,
+            "cache_read_input_tokens": 18000,
+            "cache_creation_input_tokens": 600
+          },
+          "text": "Reading the Q3 plan before revising it."
+        }
+      },
+      {
+        "seq": 9,
+        "type": "tool.failed",
+        "at": "2026-10-06T07:00:02.000Z",
+        "data": {
+          "step": 2,
+          "call_id": "c2",
+          "name": "http_fetch",
+          "reason": "threw"
+        }
+      },
+      {
+        "seq": 10,
+        "type": "model.turn.failed",
+        "at": "2026-10-06T07:00:03.000Z",
+        "data": {
+          "step": 3,
+          "error": "provider returned 529 overloaded"
+        }
+      },
+      {
+        "seq": 11,
+        "type": "tool.pending",
+        "at": "2026-10-06T07:00:04.000Z",
+        "data": {
+          "step": 4,
+          "call_id": "call_ask_2",
+          "name": "ask_human",
+          "input_bytes": 36
+        }
+      },
+      {
+        "seq": 12,
+        "type": "run.budget_exhausted",
+        "at": "2026-10-06T07:00:05.000Z",
+        "data": {
+          "kind": "steps"
+        }
+      },
+      {
+        "seq": 14,
+        "type": "run.finished",
+        "at": "2026-10-06T07:00:06.000Z",
+        "data": {
+          "outcome": "steps_exhausted"
+        }
+      }
+    ]
+  },
+  "response": {
+    "action": "continue"
+  },
+  "cancel_response": {
+    "action": "cancel",
+    "reason": "canceled by user"
+  }
+}

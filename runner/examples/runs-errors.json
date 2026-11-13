@@ -1,0 +1,27 @@
+{
+  "unauthorized": {
+    "error": "unauthorized"
+  },
+  "unsupported_version": {
+    "error": "unsupported protocol_version 7 (supported: 6)"
+  },
+  "missing_fields": {
+    "error": "run_id, workflow_path and tarball_url are required"
+  },
+  "too_large": {
+    "error": "request body exceeds 52428800 bytes"
+  },
+  "not_found": {
+    "error": "not found"
+  },
+  "internal": {
+    "status": "error",
+    "change_set": {
+      "changed": [],
+      "deleted": []
+    },
+    "artifacts": [],
+    "logs": [],
+    "error": "Unexpected token } in JSON at position 41"
+  }
+}

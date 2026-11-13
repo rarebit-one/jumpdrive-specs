@@ -1,0 +1,8 @@
+{
+  "status": "ok",
+  "plane": "execution",
+  "capabilities": {
+    "environment_spec": true,
+    "credential_gateway": true
+  }
+}
