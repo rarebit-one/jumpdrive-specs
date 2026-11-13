@@ -1,0 +1,29 @@
+name: Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  specs:
+    name: specs (json + scrub)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Every JSON file parses
+        run: |
+          set -euo pipefail
+          find . -name '*.json' -not -path './.git/*' -print0 | xargs -0 -r -n1 python3 -m json.tool > /dev/null
+      - name: No private hostnames, addresses or estate paths
+        # This repo is meant to go public. Anything that names our own hosts,
+        # private networks or internal paths fails the build.
+        run: bash scripts/scrub-check.sh
