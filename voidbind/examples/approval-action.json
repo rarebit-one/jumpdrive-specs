@@ -1,0 +1,6 @@
+{
+  "kind": "deploy",
+  "resource": "do:team/ops",
+  "summary": "Deploy release 1.2.3 to the example service",
+  "params": "eyJyZWxlYXNlIjoiMS4yLjMifQ"
+}

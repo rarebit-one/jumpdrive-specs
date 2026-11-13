@@ -1,0 +1,22 @@
+{
+  "iss": "https://broker.example.com",
+  "aud": "example-app",
+  "jti": "urq6urq6urq6urq6urq6ug",
+  "iat": 1798761900,
+  "toe": 1798761600,
+  "txn": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "sub_id": {
+    "format": "iss_sub",
+    "iss": "https://broker.example.com",
+    "sub": "mp:13131313131313131313131313131313"
+  },
+  "events": {
+    "https://schemas.openid.net/secevent/caep/event-type/session-revoked": {
+      "event_timestamp": 1798761600,
+      "initiating_entity": "admin",
+      "reason_admin": {
+        "en": "role_changed"
+      }
+    }
+  }
+}

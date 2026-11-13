@@ -1,0 +1,4 @@
+{
+  "err": "invalid_key",
+  "description": "no pinned key matches kid"
+}

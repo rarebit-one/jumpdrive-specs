@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "typ": "void-which-binds.roster",
+  "org": "ed25519:0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a",
+  "op": "set",
+  "mem": "ed25519:1111111111111111111111111111111111111111111111111111111111111111",
+  "role": "owner",
+  "by": "ed25519:0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a",
+  "prev": [],
+  "iat": 1798761600
+}

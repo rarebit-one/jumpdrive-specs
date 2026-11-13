@@ -1,0 +1,16 @@
+{
+  "iss": "https://broker.example.com",
+  "aud": "example-app",
+  "jti": "vLy8vLy8vLy8vLy8vLy8vA",
+  "iat": 1798761900,
+  "toe": 1798761600,
+  "txn": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "sub_id": {
+    "format": "iss_sub",
+    "iss": "https://broker.example.com",
+    "sub": "ed25519:1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "events": {
+    "https://schemas.openid.net/secevent/risc/event-type/account-disabled": {}
+  }
+}

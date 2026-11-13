@@ -1,0 +1,8 @@
+{
+  "v": 1,
+  "typ": "void-which-binds.delegation-pop",
+  "dlg": "g4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4M",
+  "aud": "https://broker.example.com",
+  "iat": 1798761600,
+  "exp": 1798761720
+}

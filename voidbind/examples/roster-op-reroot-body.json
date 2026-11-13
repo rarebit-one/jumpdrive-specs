@@ -1,0 +1,28 @@
+{
+  "v": 1,
+  "typ": "void-which-binds.roster",
+  "org": "ed25519:0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a",
+  "op": "reroot",
+  "succ": "ed25519:0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b",
+  "by": "ed25519:0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a",
+  "prev": [
+    "sha256:b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3"
+  ],
+  "cosig": [
+    {
+      "by": "ed25519:3333333333333333333333333333333333333333333333333333333333333333",
+      "usr": "ed25519:1212121212121212121212121212121212121212121212121212121212121212",
+      "bprev": [
+        "sha256:c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2"
+      ],
+      "sig": "7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7g"
+    },
+    {
+      "by": "ed25519:1515151515151515151515151515151515151515151515151515151515151515",
+      "usr": "mp:16161616161616161616161616161616",
+      "sig": "7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7g"
+    }
+  ],
+  "succsig": "7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7g",
+  "iat": 1798761600
+}

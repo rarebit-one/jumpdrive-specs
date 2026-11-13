@@ -1,0 +1,8 @@
+{
+  "auth_req_id": "wcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcE",
+  "expires_in": 120,
+  "interval": 5,
+  "match_number": 42,
+  "summary": "Example App: Approve payout of 1200.00 to Example Supplier",
+  "action_digest": "wsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsI"
+}

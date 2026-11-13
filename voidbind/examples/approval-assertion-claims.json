@@ -1,0 +1,17 @@
+{
+  "iss": "https://broker.example.com",
+  "sub": "ed25519:1111111111111111111111111111111111111111111111111111111111111111",
+  "aud": "example-app",
+  "org": "ed25519:0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a",
+  "iat": 1798761600,
+  "exp": 1798761900,
+  "auth_time": 1798761595,
+  "amr": [
+    "mfa",
+    "pop",
+    "user"
+  ],
+  "act_digest": "wsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsI",
+  "kind": "step-up",
+  "jti": "w8PDw8PDw8PDw8PDw8PDww"
+}

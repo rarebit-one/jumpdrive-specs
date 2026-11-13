@@ -1,0 +1,23 @@
+{
+  "challenge": {
+    "id": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+    "nonce": "p6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6c",
+    "audience": "https://broker.example.com",
+    "issued_at": 1798761600,
+    "expires_at": 1798761720,
+    "candidates": [
+      7,
+      42,
+      63
+    ],
+    "action_digest": "qKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKg",
+    "resource": "do:team/ops",
+    "ttl": 600
+  },
+  "action": {
+    "kind": "deploy",
+    "resource": "do:team/ops",
+    "summary": "Deploy release 1.2.3 to the example service",
+    "params": "eyJyZWxlYXNlIjoiMS4yLjMifQ"
+  }
+}

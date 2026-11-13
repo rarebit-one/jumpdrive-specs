@@ -1,0 +1,6 @@
+{
+  "client_id": "example-app",
+  "code_challenge": "uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLg",
+  "nonce": "<rp-session-nonce>",
+  "redirect_uri": "https://rp.example.com/auth/callback/void_which_binds"
+}
