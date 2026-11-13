@@ -1,0 +1,7 @@
+{
+  "active": true,
+  "iss": "https://id.example.com",
+  "sub": "00000000-0000-4000-8000-0000000000aa",
+  "client_id": "example-agent",
+  "exp": 1893459600
+}

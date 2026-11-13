@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "principal": {
+    "issuer": "https://id.example.com",
+    "subject": "00000000-0000-4000-8000-0000000000aa",
+    "client_id": "example-agent",
+    "token_id": "00000000-0000-4000-8000-0000000000bb"
+  },
+  "workspace": "00000000-0000-4000-8000-0000000000cc"
+}

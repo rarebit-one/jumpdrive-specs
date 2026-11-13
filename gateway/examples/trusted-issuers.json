@@ -1,0 +1,17 @@
+{
+  "issuers": [
+    {
+      "issuer": "https://id.example.com",
+      "jwks_url": "https://id.example.com/.well-known/jwks.json",
+      "audience": "gateway",
+      "introspection": {
+        "url": "https://id.example.com/api/v1/oauth/introspect",
+        "client_id": "gateway-introspection",
+        "client_secret_file": "/run/secrets/id-example-introspection",
+        "cache_ttl": "60s"
+      },
+      "require_permissions": true,
+      "credentials": { "file": "/etc/gateway/credentials.json" }
+    }
+  ]
+}

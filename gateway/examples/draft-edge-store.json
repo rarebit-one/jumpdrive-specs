@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "issuers": {
+    "https://id.example.com": {
+      "org": {
+        "provider_key:openai": { "secret_file": "/run/secrets/org-openai" },
+        "oauth:mcp.example.com": { "secret_file": "/run/secrets/org-tracker" }
+      },
+      "workspaces": {
+        "00000000-0000-4000-8000-0000000000cc": {
+          "git:git.example.com": { "secret_file": "/run/secrets/ws-cc-git" }
+        }
+      },
+      "subjects": {
+        "00000000-0000-4000-8000-0000000000aa": {
+          "provider_key:anthropic": { "secret_file": "/run/secrets/user-aa-anthropic" }
+        }
+      }
+    }
+  }
+}

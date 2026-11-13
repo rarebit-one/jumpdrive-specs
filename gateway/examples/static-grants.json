@@ -1,0 +1,36 @@
+{
+  "dev-token-PLACEHOLDER": {
+    "run_id": "run-dev",
+    "attempt": 1,
+    "current_attempt": 1,
+    "expires_at": "2030-01-01T00:00:00Z",
+    "grants": {
+      "providers": {
+        "anthropic": { "key": "sk-test-PLACEHOLDER", "credential_layer": "platform" }
+      },
+      "models": ["example-model-*"],
+      "git": [
+        {
+          "host": "git.example.com",
+          "owner": "acme",
+          "repo": "widgets",
+          "write": false,
+          "username": "x-access-token",
+          "password": "",
+          "credential_layer": "org"
+        }
+      ],
+      "connectors": [
+        {
+          "id": "search",
+          "url": "https://api.example.com/search",
+          "header": "X-Api-Key",
+          "scheme": "",
+          "token": "<api key PLACEHOLDER>",
+          "credential_layer": "workspace"
+        }
+      ]
+    },
+    "budget": { "max_tokens": 100000, "used_tokens": 0 }
+  }
+}

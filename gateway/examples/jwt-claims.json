@@ -1,0 +1,16 @@
+{
+  "iss": "https://id.example.com",
+  "sub": "00000000-0000-4000-8000-0000000000aa",
+  "aud": ["gateway"],
+  "exp": 1893459600,
+  "nbf": 1893456000,
+  "iat": 1893456000,
+  "jti": "00000000-0000-4000-8000-0000000000bb",
+  "client_id": "example-agent",
+  "permissions": [
+    "gateway:provider:anthropic",
+    "gateway:git:git.example.com/acme/widgets:write",
+    "gateway:git:git.example.com/acme/*",
+    "gateway:connector:tracker"
+  ]
+}

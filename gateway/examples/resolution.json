@@ -1,0 +1,36 @@
+{
+  "run_id": "00000000-0000-4000-8000-000000000001",
+  "attempt": 3,
+  "current_attempt": 3,
+  "expires_at": "2030-01-01T05:00:00Z",
+  "grants": {
+    "providers": {
+      "anthropic": { "key": "sk-test-PLACEHOLDER", "credential_layer": "user" },
+      "openai": { "key": "sk-test-PLACEHOLDER", "credential_layer": "org" },
+      "openrouter": { "key": "sk-test-PLACEHOLDER", "credential_layer": "workspace" }
+    },
+    "models": ["example-model-large", "example-model-small-*"],
+    "git": [
+      {
+        "host": "git.example.com",
+        "owner": "acme",
+        "repo": "widgets",
+        "write": true,
+        "username": "x-access-token",
+        "password": "<git token PLACEHOLDER>",
+        "credential_layer": "org"
+      }
+    ],
+    "connectors": [
+      {
+        "id": "c_00000000-0000-4000-8000-000000000002",
+        "url": "https://mcp.example.com/mcp",
+        "header": "Authorization",
+        "scheme": "Bearer",
+        "token": "<oauth access token PLACEHOLDER>",
+        "credential_layer": "user"
+      }
+    ]
+  },
+  "budget": { "max_tokens": 2000000, "used_tokens": 18234 }
+}

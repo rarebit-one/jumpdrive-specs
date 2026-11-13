@@ -1,0 +1,16 @@
+{
+  "ts": "2030-01-01T04:13:01.002Z",
+  "route": "connector",
+  "destination": "tracker@mcp.example.com",
+  "method": "POST",
+  "status": 200,
+  "bytes_in": 412,
+  "bytes_out": 2210,
+  "credential_layer": "org",
+  "caller_kind": "jwt",
+  "issuer": "https://id.example.com",
+  "subject": "00000000-0000-4000-8000-0000000000aa",
+  "client_id": "example-agent",
+  "decision": "forwarded",
+  "duration_ms": 143
+}
